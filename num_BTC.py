@@ -1,21 +1,33 @@
 import math
 
+# def num_BTC(b):
+#     block_half = 210000
+#     block_start = 50
+
+#     integer_value = int(b / block_half)
+#     mod_value = b % block_half
+
+#     btc_rewards = 50.0
+#     c = float(0)
+
+#     for i in range(integer_value):
+#         c = c + (btc_rewards * block_half)
+#         btc_rewards = btc_reward / 2
+
+#     c = c + mod_value * btc_rewards
+
+#     return c
+
+
 def num_BTC(b):
-    block_half = 210000
-    block_start = 50
-
-    integer_value = int(b / block_half)
-    mod_value = b % block_half
-
-    btc_rewards = 50.0
+    n = int(b / 210000)
+    m = b % 210000
+    reward = float(50)
     c = float(0)
-
-    for i in range(integer_value):
-        c = c + (btc_rewards * block_half)
-        btc_rewards = btc_reward / 2
-
-    c = c + mod_value * btc_rewards
-
+    for i in range(n):
+        c = c + reward * 210000
+        reward = reward / 2
+    c = c + m * reward
     return c
 
 
